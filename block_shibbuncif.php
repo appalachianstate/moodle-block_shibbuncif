@@ -166,8 +166,7 @@
                  .  "<p>" . get_string('visiting_label', self::BLOCK_NAME) . "</p>\n"
                  .  "<select id=\"idp\" name=\"idp\">\n"
                  .  "<option value=\"-\">" . get_string("auth_shib_wayf_select_prompt", auth_plugin_shibbuncif::PLUGIN_NAME) . "</option>\n";
-                    $preferred_idp_array = auth_plugin_shibbuncif::get_common_domain_cookie();
-                    $preferred_idp = array_pop($preferred_idp_array);
+                    $preferred_idp = auth_plugin_shibbuncif::get_common_domain_cookie();
                     $selected_set  = false;
                     foreach($idp_list as $idp_entity_id => $idp_values_array) {
                         $idp_label = array_shift($idp_values_array);
