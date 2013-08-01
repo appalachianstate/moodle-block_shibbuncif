@@ -149,7 +149,7 @@
 
                 // If they want a text link...
                 if (!empty($this->blockConfigs->show_text_link)) {
-                    $lnktag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME));
+                    $lnktag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME), array('data-ajax' => 'false'));
                     $this->content->text .= html_writer::tag('p', $lnktag , array('class' => 'text_link'));
                 }
 
