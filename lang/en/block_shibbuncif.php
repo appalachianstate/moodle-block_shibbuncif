@@ -44,3 +44,5 @@
     $string['cfgdes_show_idp_list']         = 'Display a dropdown-list of Shibboleth IdPs (configured in the Shibboleth auth plugin) from which the user can select.';
     $string['cfglbl_hide_block_header']     = 'Hide block header';
     $string['cfgdes_hide_block_header']     = 'Hide the block header (title) when displayed.';
+
+    $string['shibbuncif:addinstance']       = 'Add UNC Id Federation block';
