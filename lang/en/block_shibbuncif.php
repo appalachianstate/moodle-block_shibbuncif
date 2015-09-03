@@ -31,11 +31,11 @@
     $string['pluginname']                   = 'UNC Id Federation Login Block';
 
     $string['block_title']                  = 'UNC Id Federation';
-    $string['text_link_label']              = 'Click to Login';
-    $string['visiting_label']               = 'Visitors from other campuses<br />select your Id provider:';
+    $string['text_link_label']              = 'ASU log in';
+    $string['visiting_label']               = 'Visitors from other UNC campuses<br />select your ID provider:';
 
-    $string['cfglbl_show_image_link']       = 'Show Image Link';
-    $string['cfgdes_show_image_link']       = 'Display the image link.';
+    $string['cfglbl_show_image_link']       = 'Show Button Link';
+    $string['cfgdes_show_image_link']       = 'Display the button link.';
     $string['cfglbl_show_text_link']        = 'Show Text Link';
     $string['cfgdes_show_text_link']        = 'Display the text link.';
     $string['cfglbl_show_forgot_link']      = 'Show Forgot Link';

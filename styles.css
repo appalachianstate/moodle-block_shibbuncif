@@ -4,37 +4,56 @@
 
 /* block div */
 .block_shibbuncif .content {
-    text-align: center;
-    border: none;
+  text-align: center;
+  border: none;
 }
+
 /* button image */
 .block_shibbuncif .content .image_link img {
-    margin: .2em 0;
+  margin: .2em 0;
 	padding: 0;
-    border: none;
-    max-width: 170px;
+  border: none;
+  max-width: 170px;
 }
+
+/* button */
+.btn-asu {
+  background-color: #ffcc00 !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+.btn-asu:hover,
+.btn-asu:focus,
+.btn-asu:active,
+.btn-asu.active {
+  background-color: #edbe01 !important;
+}
+
 /* login text link */
 .block_shibbuncif .content .text_link {
-    margin: .25em 0 .25em 0;
-    padding: 0;
-    font-size: 1.75em;
+  margin: .25em 0 .25em 0;
+  padding: 0;
+  font-size: 1.75em;
 }
+
 /* idp form div */
 .block_shibbuncif .content .idpform {
-    margin: 1em 0 1em 0;
-    padding: .2em 0 .4em 0;
-    border: 1px solid #e0e0e0;
+  margin: 1em 0 1em 0;
+  padding: .2em 0 .4em 0;
+  border: 1px solid #e0e0e0;
 }
+
 /* the dropdown list */
 .block_shibbuncif .content .idpform select {
-    margin: .20em 0 .25em 0;
-    max-width: 170px;
+  margin: .20em 0 .25em 0;
+  max-width: 170px;
 
 }
+
 /* password reset link */
 .block_shibbuncif .content .footer .text_link_forgot {
-    margin: 1.25em 0;
-    padding: 0;
-    font-size: .9em;    
+  margin: 1.25em 0;
+  padding: 0;
+  font-size: .9em;  
 }

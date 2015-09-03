@@ -140,11 +140,12 @@
             // Determine if the login button and/or text
             // link need to be displayed.
             if (!isloggedin() || isguestuser()) {
-
-                // If they want an image link...
-                if (!empty($this->blockConfigs->show_image_link) && file_exists($this->blockDir . self::BUTTON_IMAGE_FILENAME)) {
-                    $imgtag = html_writer::tag('img', '', array('src' => $this->blockUrl . self::BUTTON_IMAGE_FILENAME, 'alt' => 'login button image'));
-                    $this->content->text = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), $imgtag, array('class' => 'image_link'));
+              
+              $this->content->text = html_writer::tag('h2', "Log in");
+                // If they want a button link...
+                if (!empty($this->blockConfigs->show_image_link)) {
+                    $imgtag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME), array('class' => 'btn btn-large btn-asu', 'data-ajax' => 'false'));
+                    $this->content->text .= html_writer::tag('p', $imgtag);
                 }
 
                 // If they want a text link...
@@ -152,10 +153,17 @@
                     $lnktag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME), array('data-ajax' => 'false'));
                     $this->content->text .= html_writer::tag('p', $lnktag , array('class' => 'text_link'));
                 }
+                
+                // Password reset link
+                if (!empty($this->blockConfigs->show_forgot_link) && !empty($this->forgotUrl)) {
+                    $lnktag = html_writer::link($this->forgotUrl, get_string('forgotaccount'));
+                    $this->content->text .= html_writer::tag('p', $lnktag , array('class' => 'text_link_forgot'));
+                }
 
                 // If they want an IdP list...
                 $idp_list = auth_plugin_shibbuncif::get_wayf_idp_list();
                 if (!empty($this->blockConfigs->show_idp_list) && !empty($idp_list)) {
+                    
                     // Determine the path for the common domain cookie
                     list($host, $path) = auth_plugin_shibbuncif::split_wwwroot();
                     $this->content->text .=
@@ -183,11 +191,8 @@
                                          .  "</div>\n";
                 }
 
-                // Password reset link
-                if (!empty($this->blockConfigs->show_forgot_link) && !empty($this->forgotUrl)) {
-                    $lnktag = html_writer::link($this->forgotUrl, get_string('forgotaccount'));
-                    $this->content->footer .= html_writer::tag('p', $lnktag , array('class' => 'text_link_forgot'));
-                }
+                $admtag = html_writer::link(auth_plugin_shibbuncif::get_wayf_url(), "Manual log in");
+                $this->content->footer .= html_writer::tag('p', $admtag);
 
                 $this->page->requires->js_init_call('M.block_shibbuncif.init', null, true);
 
