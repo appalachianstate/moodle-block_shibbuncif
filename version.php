@@ -29,7 +29,7 @@
 
     $plugin                 = new stdClass();
 
-    $plugin->version        = 2013052000;
+    $plugin->version        = 2013052001;
     $plugin->requires       = 2013050100;
     $plugin->component      = 'block_shibbuncif';
     $plugin->cron           = 0;
