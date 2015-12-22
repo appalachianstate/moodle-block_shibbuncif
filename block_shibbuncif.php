@@ -144,7 +144,7 @@
               $this->content->text = html_writer::tag('h2', "Log in");
                 // If they want a button link...
                 if (!empty($this->blockConfigs->show_image_link)) {
-                    $imgtag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME), array('class' => 'btn btn-large btn-asu', 'data-ajax' => 'false'));
+                    $imgtag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME), array('class' => 'btn btn-lg btn-large btn-asu', 'data-ajax' => 'false'));
                     $this->content->text .= html_writer::tag('p', $imgtag);
                 }
 
