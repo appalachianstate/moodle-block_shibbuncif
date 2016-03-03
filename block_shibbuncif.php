@@ -172,7 +172,7 @@
                  .  "<input name=\"sessinit\" type=\"hidden\" value=\"" . auth_plugin_shibbuncif::get_login_url() . "?target=" . auth_plugin_shibbuncif::get_protected_resource_url() . "&amp;entityID=\" >\n"
                  .  "<input name=\"cookiepath\" type=\"hidden\" value=\"{$path}\">"
                  .  "<p>" . get_string('visiting_label', self::BLOCK_NAME) . "</p>\n"
-                 .  "<select id=\"idp\" name=\"idp\">\n"
+                 .  "<select id=\"idp\" name=\"idp\" title=\"IDP Provider\">\n"
                  .  "<option value=\"-\">" . get_string("auth_shib_wayf_select_prompt", auth_plugin_shibbuncif::PLUGIN_NAME) . "</option>\n";
                     $preferred_idp = auth_plugin_shibbuncif::get_common_domain_cookie();
                     $selected_set  = false;
