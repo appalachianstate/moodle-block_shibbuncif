@@ -172,7 +172,7 @@
                  .  "<input name=\"sessinit\" type=\"hidden\" value=\"" . auth_plugin_shibbuncif::get_login_url() . "?target=" . auth_plugin_shibbuncif::get_protected_resource_url() . "&amp;entityID=\" >\n"
                  .  "<input name=\"cookiepath\" type=\"hidden\" value=\"{$path}\">"
                  .  "<p>" . get_string('visiting_label', self::BLOCK_NAME) . "</p>\n"
-                 .  "<select id=\"idp\" name=\"idp\" title=\"IDP Provider\">\n"
+                 .  "<select class=\"form-control\" id=\"idp\" name=\"idp\" title=\"IDP Provider\">\n"
                  .  "<option value=\"-\">" . get_string("auth_shib_wayf_select_prompt", auth_plugin_shibbuncif::PLUGIN_NAME) . "</option>\n";
                     $preferred_idp = auth_plugin_shibbuncif::get_common_domain_cookie();
                     $selected_set  = false;
@@ -186,7 +186,7 @@
                         $this->content->text .= "<option value=\"{$idp_entity_id}\"{$selected_attr}>{$idp_label}</option>\n";
                     }
                     $this->content->text .= "</select>\n"
-                                         .  "<input type=\"submit\" value=\"Submit\">\n"
+                                         .  "<input class=\"form-control\" type=\"submit\" value=\"Submit\">\n"
                                          .  "</form>\n"
                                          .  "</div>\n";
                 }

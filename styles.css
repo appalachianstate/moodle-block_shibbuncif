@@ -30,6 +30,10 @@
   background-color: #edbe01 !important;
 }
 
+a.btn-asu {
+	color: #3a3a3a;
+}
+
 /* login text link */
 .block_shibbuncif .content .text_link {
   margin: .25em 0 .25em 0;
