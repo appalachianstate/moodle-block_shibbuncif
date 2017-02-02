@@ -32,7 +32,7 @@
 
     $string['block_title']                  = 'UNC Id Federation';
     $string['text_link_label']              = 'ASU log in';
-    $string['visiting_label']               = 'Visitors from other UNC campuses<br />select your ID provider:';
+    $string['visiting_label']               = 'Visitors from other UNC campuses, select your ID provider:';
 
     $string['cfglbl_show_image_link']       = 'Show Button Link';
     $string['cfgdes_show_image_link']       = 'Display the button link.';
