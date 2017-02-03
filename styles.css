@@ -8,14 +8,6 @@
   border: none;
 }
 
-/* button image */
-.block_shibbuncif .content .image_link img {
-  margin: .2em 0;
-	padding: 0;
-  border: none;
-  max-width: 170px;
-}
-
 /* button */
 .btn-asu {
   background-color: #ffcc00 !important;
@@ -52,7 +44,10 @@ a.btn-asu {
 .block_shibbuncif .content .idpform select {
   margin: .20em 0 .25em 0;
   max-width: 170px;
+}
 
+body#page-site-index.notloggedin .block_shibbuncif .form-control {
+  display: inline-block;
 }
 
 /* password reset link */
