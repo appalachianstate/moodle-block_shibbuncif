@@ -186,7 +186,7 @@
                         $this->content->text .= "<option value=\"{$idp_entity_id}\"{$selected_attr}>{$idp_label}</option>\n";
                     }
                     $this->content->text .= "</select>\n"
-                                         .  "<input class=\"btn\" type=\"submit\" value=\"Submit\">\n"
+                                         .  "<input class=\"btn btn-default\" type=\"submit\" value=\"Submit\">\n"
                                          .  "</form>\n"
                                          .  "</div>\n";
                 }
