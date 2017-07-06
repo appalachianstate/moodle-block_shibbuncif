@@ -140,7 +140,7 @@
             // Determine if the login button and/or text
             // link need to be displayed.
             if (!isloggedin() || isguestuser()) {
-              
+
               $this->content->text = html_writer::tag('h2', "Log in");
                 // If they want a button link...
                 if (!empty($this->blockConfigs->show_image_link)) {
@@ -153,7 +153,7 @@
                     $lnktag = html_writer::link(auth_plugin_shibbuncif::get_protected_resource_url(), get_string('text_link_label', self::BLOCK_NAME), array('data-ajax' => 'false'));
                     $this->content->text .= html_writer::tag('p', $lnktag , array('class' => 'text_link'));
                 }
-                
+
                 // Password reset link
                 if (!empty($this->blockConfigs->show_forgot_link) && !empty($this->forgotUrl)) {
                     $lnktag = html_writer::link($this->forgotUrl, get_string('forgotaccount'));
@@ -163,7 +163,7 @@
                 // If they want an IdP list...
                 $idp_list = auth_plugin_shibbuncif::get_wayf_idp_list();
                 if (!empty($this->blockConfigs->show_idp_list) && !empty($idp_list)) {
-                    
+
                     // Determine the path for the common domain cookie
                     list($host, $path) = auth_plugin_shibbuncif::split_wwwroot();
                     $this->content->text .=
@@ -173,7 +173,7 @@
                  .  "<input name=\"cookiepath\" type=\"hidden\" value=\"{$path}\">"
                  .  "<p>" . get_string('visiting_label', self::BLOCK_NAME) . "</p>\n"
                  .  "<select id=\"idp\" class=\"form-control\" name=\"idp\" title=\"IDP Provider\">\n"
-                 .  "<option value=\"-\">" . get_string("auth_shib_wayf_select_prompt", auth_plugin_shibbuncif::PLUGIN_NAME) . "</option>\n";
+                 .  "<option value=\"-\">" . get_string("auth_shibbuncif_wayf_select_prompt", auth_plugin_shibbuncif::PLUGIN_NAME) . "</option>\n";
                     $preferred_idp = auth_plugin_shibbuncif::get_common_domain_cookie();
                     $selected_set  = false;
                     foreach($idp_list as $idp_entity_id => $idp_values_array) {
@@ -191,7 +191,7 @@
                                          .  "</div>\n";
                 }
 
-                $admtag = html_writer::link(auth_plugin_shibbuncif::get_wayf_url(), "Manual log in");
+                $admtag = html_writer::link(auth_plugin_shibbuncif::get_wayf_url(), get_string('manual_login_label', self::BLOCK_NAME));
                 $this->content->footer .= html_writer::tag('p', $admtag);
 
                 $this->page->requires->js_init_call('M.block_shibbuncif.init', null, true);

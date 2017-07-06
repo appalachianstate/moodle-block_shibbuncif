@@ -29,9 +29,9 @@
 
     $plugin                 = new stdClass();
 
-    $plugin->version        = 2013052001;
-    $plugin->requires       = 2013050100;
+    $plugin->version        = 2017052000;
+    $plugin->requires       = 2017051500;
     $plugin->component      = 'block_shibbuncif';
     $plugin->cron           = 0;
     $plugin->maturity       = MATURITY_STABLE;
-    $plugin->dependencies   = array('auth_shibbuncif' => ANY_VERSION);
+    $plugin->dependencies   = array('auth_shibbuncif' => 2017052000);

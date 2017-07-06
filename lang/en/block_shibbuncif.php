@@ -45,4 +45,5 @@
     $string['cfglbl_hide_block_header']     = 'Hide block header';
     $string['cfgdes_hide_block_header']     = 'Hide the block header (title) when displayed.';
 
+    $string['manual_login_label']           = 'Manual login';
     $string['shibbuncif:addinstance']       = 'Add UNC Id Federation block';
