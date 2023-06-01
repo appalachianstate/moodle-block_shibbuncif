@@ -48,7 +48,6 @@
         $settings->add($adminSetting);
         unset($adminSetting);
 
-
         $field = 'show_text_link';
         $adminSetting = new admin_setting_configcheckbox(
             $field,
@@ -59,7 +58,6 @@
         $settings->add($adminSetting);
         unset($adminSetting);
 
-
         $field = 'show_forgot_link';
         $adminSetting = new admin_setting_configcheckbox(
             $field,
@@ -69,7 +67,6 @@
         $adminSetting->plugin = $plugin->component;
         $settings->add($adminSetting);
         unset($adminSetting);
-
 
         $field = 'show_idp_list';
         $adminSetting = new admin_setting_configcheckbox(

@@ -86,21 +86,24 @@
         {
             global $CFG;
 
-
-
             $this->title        = get_string('block_title', self::BLOCK_NAME);
             $this->version      = self::BLOCK_VERSION;
 
             $this->blockConfigs = get_config(self::BLOCK_NAME);
-
+            $forgot = get_config('auth_shibbuncif', 'forgot_password_url');
 
             $this->blockDir     = "{$CFG->dirroot}/" . self::BLOCK_PATH . "/";
             $this->blockUrl     = "{$CFG->wwwroot}/" . self::BLOCK_PATH . "/";
 
-            $this->forgotUrl    = empty($CFG->forgottenpasswordurl)
-                                ? ''
-                                : $CFG->forgottenpasswordurl;
-
+            if (!empty($forgot)) {
+                $this->forgotUrl = $forgot;
+            } else {
+                if (empty($CFG->forgottenpasswordurl)) {
+                    $this->forgotUrl = $CFG->wwwroot . '/login/forgot_password.php';
+                } else {
+                    $this->forgotUrl = $CFG->forgottenpasswordurl;
+                }
+            }
         }
 
 
